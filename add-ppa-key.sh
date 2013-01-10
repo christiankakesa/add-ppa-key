@@ -39,7 +39,7 @@ exit_failure()
 
 if [ $# -ne 1 -o `expr length "${1}"` -ne 8 -o `expr "${1}" : '^[0-9a-fA-F]*$'` -eq 0 ]
 then
-	usage;
+	usage
 	exit 1
 fi
 
@@ -49,9 +49,8 @@ for ret in $PIPESTATUS
 do
 	if [ $ret -ne 0 ]
 	then
-		exit_failure $ret;
+		exit_failure $ret
 	fi
 done
 
-exit_success;
-
+exit_success
